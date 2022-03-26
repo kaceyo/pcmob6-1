@@ -39,16 +39,19 @@ export default function ShowScreen({ navigation, route }) {
       });
       console.log(response.data);
       setPost(response.data);
-    } catch (error) {
       console.log(error.response.data);
       if ((error.response.data.error = "Invalid token")) {
         navigation.navigate("SignInSignUp");
       }
+    } catch {
+      
     }
   }
 
   function editPost() {
-    navigation.navigate("Edit");
+    navigation.navigate("Edit", { id: post.id, post: post });
+
+    
   }
 
   return (

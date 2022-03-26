@@ -45,7 +45,7 @@ export default function CreateScreen({ navigation }) {
           onChangeText={(text) => setTitle(text)}
         />
         <Text style={[additionalStyles.label, styles.text]}>
-          Enter Content:
+          Enter Details:
         </Text>
         <TextInput
           style={additionalStyles.input}

@@ -102,7 +102,7 @@ export default function AccountScreen({ navigation }) {
           justifyContent: "center",
           }}
           >
-        {profilePicture && (
+        {/* {profilePicture && (
           <TouchableWithoutFeedback onPress={changePicSize}>
             <Animated.Image
               style={{
@@ -113,16 +113,16 @@ export default function AccountScreen({ navigation }) {
               source={{uri: profilePicture?.uri }}
             />  
           </TouchableWithoutFeedback>
-        )}
+        )} */}
        </View>
-       <TouchableOpacity onPress={() => navigation.navigate("Camera")}>
+       {/* <TouchableOpacity onPress={() => navigation.navigate("Camera")}>
          <Text style={{ marginTop: 10, fontSize: 20, color: "#0000EE" }}>
            {profilePicture
            ? "Delete this photo. Take another one"
            : "No profile picture. Click to take one."}
          </Text>
-       </TouchableOpacity>
-       <View
+       </TouchableOpacity> */}
+       {/* <View
          style={{
            flexDirection: "row",
            justifyContent: "space-between",
@@ -132,16 +132,16 @@ export default function AccountScreen({ navigation }) {
        >
          <Text style={[styles.content, styles.text]}> Dark Mode? </Text>
          <Switch value={isDark} onChange={switchMode} />
-       </View>
+       </View> */}
        <TouchableOpacity style={[styles.button]} onPress={signOut}>
          <Text style={styles.buttonText}>Sign Out</Text>
        </TouchableOpacity>
-       <TouchableOpacity 
+       {/* <TouchableOpacity 
         style={{ ...styles.button, marginTop: 30 }} 
         onPress={() => picSize.stopAnimation()}
         >
          <Text style={styles.buttonText}>Stop Animation</Text>
-       </TouchableOpacity>
+       </TouchableOpacity> */}
     </View>
   );
 }
